@@ -1,10 +1,12 @@
 var express = require('express');
 
-var content = fs.readFileSync('./bitstarter/index.html');
 
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
+
+var content = fs.readFileSync('./bitstarter/index.html', 'utf8');
+
   response.send( content ); 
 });
 
