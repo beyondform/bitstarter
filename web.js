@@ -3,9 +3,10 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var content = fs.readFileSync('./bitstarter/index.html', 'utf8');
+
 app.get('/', function(request, response) {
 
-var content = fs.readFileSync('./bitstarter/index.html', 'utf8');
 
   response.send( content ); 
 });
