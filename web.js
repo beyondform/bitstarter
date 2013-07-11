@@ -8,7 +8,7 @@ var content = fs.readFileSync('./bitstarter/index.html', 'utf8');
 app.get('/', function(request, response) {
 
 
-  response.send( content ); 
+  response.end( content ); 
 });
 
 var port = process.env.PORT || 5000;
